@@ -5,7 +5,6 @@ WITH film_rentals AS (
     JOIN rental ON inventory.inventory_id = rental.inventory_id
     GROUP BY film_id
 ),
-
 -- finds the film with the most rentals
 most_rented_film AS (
     SELECT film_id
