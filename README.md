@@ -1,6 +1,6 @@
 # DVD Rental PostgreSQL Project
 
-This project presents a compilation of SQL queries, exhibiting different SQL functionalities.  Each query has been developed with the DVD Rental Database. The database includes tables such as film, inventory, rental, payment, category, film_category among others. The schema is rendered using DataGrip.
+This project presents a compilation of SQL queries, exhibiting different SQL functionalities.  Each query has been developed with the DVD Rental Database (imported from `dvdrental.tar`). The database includes tables such as film, inventory, rental, payment, category, film_category among others. The schema is rendered using DataGrip.
 ![](public.png)
 
 ## 1. IN and Sub-Query
