@@ -1,17 +1,7 @@
- -- list each payment and the movie it was for, ordered by the payment amount:
-
-SELECT
-    m.title,
-    SUM(p.amount) AS total_amount
-FROM
-    payment p
-JOIN
-    rental r ON p.rental_id = r.rental_id
-JOIN
-    inventory i ON r.inventory_id = i.inventory_id
-JOIN
-    film m ON i.film_id = m.film_id
-GROUP BY
-    m.film_id
-ORDER BY
-    total_amount DESC;
+-- return all distinct customer_ids who have either rented films from category 5 or made a payment greater than 20
+SELECT customer_id FROM film_category
+INNER JOIN inventory ON film_category.film_id = inventory.film_id
+INNER JOIN rental ON inventory.inventory_id = rental.inventory_id
+WHERE category_id = 5
+UNION
+SELECT customer_id FROM payment WHERE amount > 20;
